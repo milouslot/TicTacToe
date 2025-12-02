@@ -2,7 +2,20 @@
 
 import random
 print("Welcome")
-mode = input("Type '1' for 2-player mode or '2' to play against the computer: ")
+
+#choose 1 or 2 player game
+
+while True:
+    mode_input = input("Type '1' for 2-player mode or '2' to play against the computer: ")
+
+    if mode_input == "1":
+        mode = "1"
+        break
+    elif mode_input == "2":
+        mode = "2"
+        break
+    else:
+        print("Invalid choice! Please enter '1' or '2' only.\n")
 
 # print the board
 
@@ -126,4 +139,5 @@ while game_running:
         player_input(board)
     check_win()
     check_tie()
+
     switch_player()
